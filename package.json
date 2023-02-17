@@ -1,0 +1,40 @@
+{
+  "name": "@bm/wxdk-design-tokens",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*",
+    "src/**/*"
+  ],
+  "scripts": {
+    "eslint": "eslint --cache --no-error-on-unmatched-pattern --max-warnings 20 'src/**/*.{js,jsx,ts,tsx,mjs}'",
+    "stylelint": "stylelint --cache 'src/**/*.{js,jsx,ts,tsx,mjs,css,scss}'",
+    "type-check": "tsc -p tsconfig.json --noEmit",
+    "test:visual": "npx chromatic",
+    "dev": "npx rollup -c rollup.config.js --watch",
+    "build": "rimraf ./lib; npx rollup -c rollup.config.js",
+    "storybook": "start-storybook -p 6007",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@bm/clientside-css": "^0.1.2",
+    "@bm/clientside-css-utils": "^0.7.1",
+    "@linaria/core": "^4.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@bm/clientside-babel-package-config": "^0.1.2",
+    "@bm/clientside-eslint-config": "^0.7.1",
+    "@bm/clientside-linaria-config": "^0.2.1",
+    "@bm/clientside-rollup-config": "^0.4.1",
+    "@bm/clientside-storybook-config": "^0.1.4",
+    "@bm/clientside-stylelint-config": "^0.1.3",
+    "@bm/clientside-typescript-config": "^0.1.3",
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10"
+  }
+}

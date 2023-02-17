@@ -1,0 +1,9 @@
+src/**/*.ts
+src/**/*.tsx
+src/**/*.js
+src/**/*.jsx
+src/**/*.mjs
+
+!src/**/*.styles.ts
+!src/**/*.styles.js
+!src/**/*.styles.mjs
